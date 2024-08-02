@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+body {
+    background: #222222;
+    padding: 0;
+    margin: 0;
+    
+    color: white; /* Default text color */
+}
+
+.header {
+    position: relative;
+    height: 10px;
+    background: linear-gradient(141deg, cyan 0%, rebeccapurple 40%, deeppink 90%);
+}
+
+
+
+
+
+
+
+/* form css */
+.formBody{
+    margin-top: 30px;
+    background-color: #2d2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 30px auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+form {
+    
+    padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: auto;
+    
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(141deg, cyan 0%, rebeccapurple 40%, deeppink 90%);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+.submit-btn:hover {
+    background: linear-gradient(141deg, deeppink 0%, rebeccapurple 40%, cyan 90%);
+}
+label, input {
+    margin-bottom: 10px;
+}
+input {
+    padding: 8px;
+    font-size: 14px;
+}
+.output {
+    width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #2d2c2c;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+.output p {
+    margin: 0 0 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+
+/* Footer */
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    background-color: #2d2c2c;
+    color: white; /* Added for text color */
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Added for responsiveness */
+}
+
+.footer li {
+    margin: 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px; /* Added padding for better click area */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer a:hover {
+    color: #7a2c8b; /* Changed color on hover for better visibility */
+    box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+}
+
+.footer p {
+    break-before: auto;
+    margin: 10px 0; /* Added margin for spacing */
+    padding: 0 20px; /* Added padding for text alignment */
+    color: smokeWhite;
+}
+
+/* Optional: Add a media query for better responsiveness */
+@media (max-width: 600px) {
+    .footer {
+        padding: 15px 0;
+    }
+
+    .footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
