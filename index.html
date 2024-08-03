@@ -5,73 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="includes/Css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-
-
     <title>Vue.js Form</title>
-  
 </head>
 <body>
-    <div class="header">
-
-
-    </div>
-    <div id="app" v-cloak >
+    <div class="header"></div>
+    <div id="app" v-cloak>
         <div class="formBody">
-        <form @submit.prevent="handleSubmit">
-            <label for="name">Name</label>
-            <input type="text" v-model="nameInput" id="name" placeholder="Full Name">
-            <label for="email">Email</label>
-            <input type="email" v-model="emailInput" id="email" placeholder="example@gmail.com">
-            <label for="password">Password</label>
-            <input type="password" v-model="passwordInput" id="password" placeholder="*********">
-            <button type="submit" class="submit-btn" >Submit</button>
-        </form>
-    </div>
+            <form @submit.prevent="handleSubmit">
+                <label for="name">Name</label>
+                <input type="text" v-model="nameInput" id="name" required placeholder="Full Name">
+                <label for="email">Email</label>
+                <input type="email" v-model="emailInput" id="email" required placeholder="example@gmail.com">
+                <label for="password">Password</label>
+                <input type="password" v-model="passwordInput" id="password" required placeholder="*********">
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
         <div class="output">
             <p><strong>Name:</strong> {{ nameInput }}</p>
             <p><strong>Email:</strong> {{ emailInput }}</p>
             <p><strong>Password:</strong> {{ passwordInput }}</p>
         </div>
-       
+        <div class="footer">
+            <ul>
+                <li><a href="mailto:2003ahah@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="https://github.com/AHAH000"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="www.linkedin.com/in/ahmedhamdi-hegazi"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+            <p>By Ahmed Hamdi Hegazi</p>
+        </div>
     </div>
-                                        <!-- footer -->
-
-<div class="footer">
-    <ul>
-        <li><a href="mailto:2003ahah@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
-        <li><a href="https://github.com/AHAH000"><i class="fa-brands fa-github"></i></a></li>
-        <li><a href="www.linkedin.com/in/ahmedhamdi-
-            hegazi"><i class="fa-brands fa-linkedin"></i></a></li>
-    </ul>
-    <p>By Ahmed Hamdi Hegazi</p>
-</div>
-
-
-            <!--Scripts-->
-            <script src="includes/Scripts/form.js"></script>
-            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-            <script>
-
-            const app = Vue.createApp({
-                data() {
-                    return {
-                        nameInput: '',
-                        emailInput: '',
-                        passwordInput: ''
-                    };
-                },
-                methods: {
-                    handleSubmit() {
-                        console.log('Name:', this.nameInput);
-                        console.log('Email:', this.emailInput);
-                        console.log('Password:', this.passwordInput);
-                    }
+    <!-- Scripts -->
+    <script src="includes/Scripts/form.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    nameInput: '',
+                    emailInput: '',
+                    passwordInput: ''
+                };
+            },
+            methods: {
+                handleSubmit() {
+                    console.log('Name:', this.nameInput);
+                    console.log('Email:', this.emailInput);
+                    console.log('Password:', this.passwordInput);
+                    const query = `name=${encodeURIComponent(this.nameInput)}&email=${encodeURIComponent(this.emailInput)}`;
+                    window.location.href = `hello.html?${query}`;
                 }
-            });
-        
-            app.mount('#app');
-        </script>
-        
+            }
+        });
+        app.mount('#app');
+    </script>
 </body>
 </html>
