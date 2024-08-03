@@ -1,4 +1,4 @@
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+{/* <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     const app = Vue.createApp({
         data() {
@@ -17,4 +17,4 @@
         }
     });
 
-    app.mount('#app');
+    app.mount('#app'); */}
